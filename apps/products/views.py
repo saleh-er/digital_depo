@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import Product
+# Change this line:
+from apps.products.models import Product 
 
 def home_temp(request):
     return render(request, 'home.html')
