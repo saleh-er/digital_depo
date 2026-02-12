@@ -2,9 +2,6 @@ import os
 import sys
 from pathlib import Path
 
-# 1. BASE DIRECTORY SETUP
-# -------------------------------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
@@ -26,9 +23,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Your Internal Modular Apps
-    'users',
-    'products',
-    'orders',
+    'apps.users',
+    'apps.products',
+    'apps.orders',
 ]
 
 MIDDLEWARE = [
@@ -47,7 +44,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Tells Django to look in your global templates folder
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], 
+        'DIRS': [os.path.join('templates')], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
