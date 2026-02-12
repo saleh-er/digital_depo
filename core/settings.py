@@ -6,9 +6,6 @@ from pathlib import Path
 # -------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# This line is the "Magic Fix" for your ModuleNotFoundError on Windows.
-# It tells Python to look inside the 'apps' folder for your modules.
-sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 
 # 2. SECURITY & DEBUG
@@ -29,9 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Your Internal Modular Apps
-    'apps.users',
-    'apps.products',
-    'apps.orders',
+    'users',
+    'products',
+    'orders',
 ]
 
 MIDDLEWARE = [
