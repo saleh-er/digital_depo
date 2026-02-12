@@ -24,7 +24,7 @@ INSTALLED_APPS = [
 
     # Your Internal Modular Apps
     'apps.users',
-    'apps.products',
+    'apps.products.apps.ProductsConfig',
     'apps.orders',
 ]
 
